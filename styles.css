@@ -512,6 +512,11 @@ ul {
     font-size:12px;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  
+}
 .Karannn{
     text-align:center;
     padding-bottom:0.5rem;
