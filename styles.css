@@ -394,12 +394,12 @@ ul {
   You-tube Btn Design
 */
 
-.the-blood-coders__btn-icon {
+.developer_karan__btn-icon {
   font-size: 1.6em;
   margin-right: 0.5rem;
 }
 
-.the-blood-coders__backdrop {
+.developer_karan__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -417,7 +417,7 @@ ul {
           align-items: center;
 }
 
-.the-blood-coders__popup {
+.developer_karan__popup {
   width: 18rem;
   background-color: rgb(255, 255, 255);
   padding: 1rem;
@@ -428,9 +428,9 @@ ul {
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
-.the-blood-coders__popup-header,
-.the-blood-coders__popup-header:link,
-.the-blood-coders__popup-header:visited {
+.developer_karan__popup-header,
+.developer_karan__popup-header:link,
+.developer_karan__popup-header:visited {
   font-size: 1.2em;
   font-weight: 600;
   margin-top: -2.6rem;
@@ -459,12 +459,12 @@ ul {
   text-decoration: none;
 }
 
-.the-blood-coders__code-name {
+.developer_karan__code-name {
   font-size: 1.2em;
   margin-bottom: 1rem;
 }
 
-.the-blood-coders__code-name--span {
+.developer_karan__code-name--span {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#e20000), to(#ff3131));
   background-image: -o-linear-gradient(left bottom, #e20000, #ff3131);
   background-image: linear-gradient(to right top, #e20000, #ff3131);
@@ -472,7 +472,7 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
-.the-blood-coders__link {
+.developer_karan__link {
   word-break: break-all;
   line-height: 1.4;
   display: block;
@@ -481,10 +481,10 @@ ul {
   text-decoration:underline;
 }
 
-.the-blood-coders__ok-btn,
-.the-blood-coders__ok-btn:link,
-.the-blood-coders__ok-btn:active,
-.the-blood-coders__ok-btn:visited {
+.developer_karan__ok-btn,
+.developer_karan__ok-btn:link,
+.developer_karan__ok-btn:active,
+.developer_karan__ok-btn:visited {
   text-transform: uppercase;
   margin-top: 1rem;
   display: inline-block;
