@@ -537,7 +537,7 @@ document['addEventLi' + _0x23a3b8(0x1ed, 0x235, 0x1fc, 0x211)](_0x23a3b8(0x269, 
                 }, _0x4b464b = function (_0x324daf, _0x4103e9, _0x1f8fee, _0x4653d7) {
                     return _0x536ded(_0x4653d7, _0x324daf - -0x159, _0x1f8fee - 0x10c, _0x4653d7 - 0xa8);
                 };
-            window[_0x3d4cf0[_0x14aedf(0x26, 0x34, 0x41, -0x1f)](Karannn_0x4082, '0xd')][_0x3d4cf0['HwoQo']] = _0x4b464b(0x2c, 0x4d, -0x1a, 0x10) + _0x4b464b(-0x7e, -0xac, -0xb7, -0x50) + _0x4b464b(-0x42, -0x63, -0x49, -0x5b);
+            window[_0x3d4cf0[_0x14aedf(0x26, 0x34, 0x41, -0x1f)](Karannn_0x4082, '0xd')][_0x3d4cf0['HwoQo']] = atob("aHR0cHM6Ly93d3cu") + atob("eW91dHViZS5jb20v") + atob("QERldmVsb3Blcl9LYXJhbg==");
         });
     });
 });
@@ -716,4 +716,16 @@ document.addEventListener('keydown', (e) => {
 // Prevent form submission if wrapped in a form
 document.addEventListener('submit', (e) => {
     e.preventDefault();
+});
+
+const profile = document.getElementById("me");
+
+// remove all old listeners
+const newProfile = profile.cloneNode(true);
+profile.parentNode.replaceChild(newProfile, profile);
+
+// add your clean logic
+newProfile.addEventListener("click", (e) => {
+    e.stopPropagation();
+    window.open("https://github.com/KG48");
 });
