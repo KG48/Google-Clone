@@ -600,4 +600,120 @@ document.querySelector(".developer_karan__ok-btn")
     closePopup();
   });
 
-  
+// Create particles dynamically
+function createParticles() {
+    const particlesContainer = document.querySelector('.particles');
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random position
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        
+        // Random animation delay and duration
+        particle.style.animationDelay = Math.random() * 2 + 's';
+        particle.style.animationDuration = (2 + Math.random() * 2) + 's';
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Initialize preloader
+function initPreloader() {
+    createParticles();
+    
+    // Remove preloader after animation completes
+    setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    }, 7500);
+}
+
+// Search functionality
+function initSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButtons = document.querySelectorAll('.search-btn');
+    
+    // Handle Enter key
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && searchInput.value.trim()) {
+            performSearch(searchInput.value);
+        }
+    });
+    
+    // Handle button clicks
+    searchButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (searchInput.value.trim()) {
+                performSearch(searchInput.value);
+            }
+        });
+    });
+}
+
+function performSearch(query) {
+    console.log('Searching for:', query);
+    // In a real implementation, this would redirect to Google search results
+    // window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+    alert(`Searching for: ${query}`);
+}
+
+// Add hover effects and interactions
+function initInteractions() {
+    // Mic icon click
+    const micIcon = document.querySelector('.mic-icon');
+    if (micIcon) {
+        micIcon.addEventListener('click', () => {
+            alert('Voice search activated! (Demo only)');
+        });
+    }
+    
+    // Camera icon click
+    const cameraIcon = document.querySelector('.camera-icon');
+    if (cameraIcon) {
+        cameraIcon.addEventListener('click', () => {
+            alert('Image search activated! (Demo only)');
+        });
+    }
+    
+    // I'm Feeling Lucky button
+    const luckyBtn = document.querySelectorAll('.search-btn')[1];
+    if (luckyBtn) {
+        luckyBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            alert("I'm Feeling Lucky! (Demo only)");
+        });
+    }
+}
+
+// Add smooth scroll behavior
+function addSmoothScroll() {
+    document.documentElement.style.scrollBehavior = 'smooth';
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initPreloader();
+    initSearch();
+    initInteractions();
+    addSmoothScroll();
+});
+
+// Add keyboard shortcut (Ctrl/Cmd + K to focus search)
+document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.focus();
+        }
+    }
+});
+
+// Prevent form submission if wrapped in a form
+document.addEventListener('submit', (e) => {
+    e.preventDefault();
+});

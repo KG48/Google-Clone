@@ -255,7 +255,109 @@
     <!-- Sidebar end -->
   </div>
 
-  
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KG Google Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <!-- Animated Particles -->
+        <div class="particles"></div>
+        
+        <!-- Radial Gradient Glow -->
+        <div class="radial-glow"></div>
+        
+        <!-- Text Animation Phase -->
+        <div id="textPhase" class="text-phase">
+            <div class="text-container">
+                <div class="animated-word" data-word="START">
+                    <h1>START</h1>
+                    <div class="word-glow"></div>
+                </div>
+                <div class="animated-word" data-word="CONNECTED">
+                    <h1>CONNECTED</h1>
+                    <div class="word-glow"></div>
+                </div>
+                <div class="animated-word" data-word="CREATING">
+                    <h1>CREATING</h1>
+                    <div class="word-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Logo Animation Phase -->
+        <div id="logoPhase" class="logo-phase">
+            <!-- Expanding Light Rings -->
+            <div class="light-ring ring-1"></div>
+            <div class="light-ring ring-2"></div>
+            <div class="light-ring ring-3"></div>
+            
+            <!-- Logo Container -->
+            <div class="logo-container">
+                <!-- Outer Glow -->
+                <div class="outer-glow"></div>
+                
+                <!-- KG Logo SVG -->
+                <svg width="200" height="200" viewBox="0 0 200 200" class="kg-logo">
+                    <!-- K Letter -->
+                    <path id="kLetter" d="M 40 50 L 40 150 M 40 100 L 90 50 M 40 100 L 90 150" 
+                          stroke="url(#gradient1)" stroke-width="12" 
+                          stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    
+                    <!-- G Letter -->
+                    <path id="gLetter" d="M 160 70 A 30 30 0 1 0 160 130 L 160 100 L 140 100" 
+                          stroke="url(#gradient2)" stroke-width="12" 
+                          stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    
+                    <!-- Gradients -->
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" class="stop1">
+                                <animate attributeName="stop-color" 
+                                         values="#4285f4; #ea4335; #4285f4" 
+                                         dur="3s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="100%" class="stop2">
+                                <animate attributeName="stop-color" 
+                                         values="#ea4335; #fbbc04; #ea4335" 
+                                         dur="3s" repeatCount="indefinite"/>
+                            </stop>
+                        </linearGradient>
+                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" class="stop3">
+                                <animate attributeName="stop-color" 
+                                         values="#fbbc04; #34a853; #fbbc04" 
+                                         dur="3s" repeatCount="indefinite"/>
+                            </stop>
+                            <stop offset="100%" class="stop4">
+                                <animate attributeName="stop-color" 
+                                         values="#34a853; #4285f4; #34a853" 
+                                         dur="3s" repeatCount="indefinite"/>
+                            </stop>
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Glowing Dots -->
+                    <circle class="glow-dot dot-1" cx="40" cy="50" r="6" fill="#4285f4"/>
+                    <circle class="glow-dot dot-2" cx="90" cy="150" r="6" fill="#ea4335"/>
+                    <circle class="glow-dot dot-3" cx="140" cy="100" r="6" fill="#34a853"/>
+                </svg>
+                
+                <!-- Rotating Light Beam -->
+                <div class="light-beam"></div>
+            </div>
+            
+            <!-- Loading Text -->
+            <p class="loading-text">LOADING<span class="dots">...</span></p>
+        </div>
+    </div>
+    
+    
 
 
   <iframe id="myFrame"></iframe>
