@@ -941,3 +941,9 @@ body {
         opacity: 1;
     }
 }
+
+@media (max-width: 600px) {
+    .animated-word h1 {
+        letter-spacing: 0.1em;
+    }
+}
